@@ -3,7 +3,7 @@ import pandas as pd
 import openpyxl
 import matplotlib.pyplot as plt
 
-def print_groupby(grouptype, plot_type):
+def print_groupby(grouptype, plot_type): #plot type among "bar", barh", "pie", etc.
     grouptype.plot(kind=plot_type)
     plt.show()
 

@@ -6,9 +6,8 @@ import functions
 
 
 pd.set_option( "display.max_columns", None)
-
 pp = pd.read_csv('pokemon.csv') #pp - pokemon pandas
-
+pp['Total']= pp['HP']+pp['Attack']+pp['Defense']+pp['Sp. Atk']+pp['Sp. Def']+pp['Speed']
 print(pp.columns)
 
 
@@ -21,9 +20,7 @@ NonLegendary = pp.loc[pp['Legendary'] == False]
 Group_NonLegendary = NonLegendary.groupby(['Type 1']).size()
 
 #print(Group_NonLegendary)
-#print(group["#"])
 
-#functions.print_groupby(Group_NonLegendary)
-#pp.plot.scatter(x=pp['Attack'],y= pp['Defense']);
+Group_mean = pp.groupby(['Type 1']).mean()
 #functions.print_ad(Legendary)
-functions.print_groupby(Group, 'pie')
+functions.print_groupby(Group_mean['Total'], 'bar')
