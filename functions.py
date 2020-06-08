@@ -3,8 +3,8 @@ import pandas as pd
 import openpyxl
 import matplotlib.pyplot as plt
 
-def print_groupby(grouptype):
-    grouptype.plot(kind='bar', color='blue')
+def print_groupby(grouptype, plot_type):
+    grouptype.plot(kind=plot_type)
     plt.show()
 
 def print_ad(df):

@@ -25,5 +25,5 @@ Group_NonLegendary = NonLegendary.groupby(['Type 1']).size()
 
 #functions.print_groupby(Group_NonLegendary)
 #pp.plot.scatter(x=pp['Attack'],y= pp['Defense']);
-functions.print_ad(Legendary)
-functions.print_groupby(Group_Legendary)
+#functions.print_ad(Legendary)
+functions.print_groupby(Group, 'pie')
